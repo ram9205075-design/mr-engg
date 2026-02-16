@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>MR Engineering Works | Precision Tools</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- STICKY HEADER -->
+  <header id="header">
+    <div class="container header-container">
+      <div class="logo">
+        <h1>MR <span>Engineering Works</span></h1>
+      </div>
+      <!-- Desktop Navigation -->
+      <nav class="navbar desktop-nav">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Hamburger Icon (mobile) -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Navigation (slide from left) -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-header">
+        <h3>MR Engineering</h3>
+        <button id="closeMobileNav">&times;</button>
+      </div>
+      <ul>
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#products" class="mobile-link">Products</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+    <div id="overlay" class="overlay"></div>
+  </header>
+
+  <main>
+    <!-- HOME SECTION -->
+    <section id="home" class="section hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h2>Precision Tools.<br><span class="orange-text">Trusted Engineering.</span></h2>
+          <p class="hero-desc">MR Engineering Works has been a leader in tool manufacturing since 1995. We deliver high‑precision industrial tools and fabrication solutions to clients worldwide. Quality, reliability, and innovation drive everything we build.</p>
+          <a href="#products" class="btn btn-primary cta-btn">View Products <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Industrial machinery" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION (dynamic cards) -->
+    <section id="products" class="section bg-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our <span class="orange-text">Products</span></h2>
+          <p>Precision engineered tools for modern industry</p>
+        </div>
+        <div id="productGrid" class="product-grid">
+          <!-- Products will be injected from JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our <span class="orange-text">Services</span></h2>
+          <p>Comprehensive industrial solutions</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Custom Tool Manufacturing</h3>
+            <p>Tailor-made cutting tools, dies, and precision fixtures according to your blueprints.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-industry"></i>
+            <h3>Industrial Equipment Fabrication</h3>
+            <p>Heavy-duty machinery components, frames, and assemblies built to last.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-microchip"></i>
+            <h3>Machine Parts Engineering</h3>
+            <p>Reverse engineering, CNC machining, and high-tolerance parts production.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>Repair & Maintenance</h3>
+            <p>On-site and off-site repair, refurbishment, and preventive maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact <span class="orange-text">Us</span></h2>
+          <p>Get in touch with our engineering team</p>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="address-box">
+              <h4><i class="fas fa-map-marker-alt"></i> Office Address</h4>
+              <p id="companyAddressDisplay">123 Industrial Estate, Phase II, Pune - 411035, India</p>
+            </div>
+            <div class="map-container">
+              <!-- Google Map iframe placeholder – editable via admin -->
+              <iframe id="mapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.229253187472!2d73.85625531478838!3d18.520430287404358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c065144d8edf%3A0x37a9a4fcbaaa26d6!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1625123456789!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>MR Engineering Works</h4>
+          <p>Precision tool manufacturing & industrial engineering since 1995. ISO 9001:2015 certified.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#" data-modal="privacy">Privacy Policy</a></li>
+            <li><a href="#" data-modal="disclaimer">Disclaimer</a></li>
+            <li><a href="#" data-modal="about">About Us</a></li>
+            <li><a href="#" data-modal="contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Location (Editable)</h4>
+          <p id="footerLocationDisplay">123 Industrial Estate, Pune</p>
+          <p><i class="fas fa-phone-alt"></i> +91 20 1234 5678</p>
+          <p><i class="fas fa-envelope"></i> sales@mrengineering.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> MR Engineering Works. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL POPUPS (for footer links) -->
+  <div id="modalContainer" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modalBody">
+        <!-- dynamic content from localStorage -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
